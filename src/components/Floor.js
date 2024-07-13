@@ -125,7 +125,11 @@ function Floor({ floorno, vacating }) {
 
 
             <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <Card sx={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)' }}>
+                <Card sx={{ maxWidth: '100%', 
+                    borderRadius: '8px',
+                     boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                     maxHeight: useMediaQuery(960) ? '230px' : 'unset',
+                    overflowY: useMediaQuery ? 'scroll' : 'unset' }}>
                     <Grid container spacing={2}>
                         {/* Grid 1 */}
                         <Grid item xs={12} md={4} sx={{paddingBottom: useMediaQuery(960) ? '0px' : '2rem'}}>
